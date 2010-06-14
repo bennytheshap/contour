@@ -1,0 +1,20 @@
+base: &base
+  adapter: mongodb
+  database: contouring-dev
+#These are needed to authenticate with your db
+#should it run on another server
+#  host: genesis.mongohq.com
+#  username: your-username
+#  password: your-password
+
+development:
+  <<: *base
+
+test:
+  <<: *base
+  database: contouring-test
+
+
+production:
+  <<: *base
+
